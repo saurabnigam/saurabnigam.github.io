@@ -3,116 +3,398 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saurabh Nigam | Engineering Manager</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <title>Saurabh Nigam - Engineering Manager | Data Infrastructure & Platform Engineering</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Roboto', Arial, sans-serif; background: linear-gradient(120deg, #e0eafc, #cfdef3); color: #222; margin: 0; padding: 0; }
-        .container { max-width: 900px; margin: 40px auto; background: #fff; border-radius: 12px; box-shadow: 0 8px 32px rgba(44,62,80,0.12); padding: 48px 36px; }
-        h1 { font-size: 2.7em; margin-bottom: 0.2em; color: #1a237e; letter-spacing: 2px; }
-        .contact { margin-bottom: 1.7em; font-size: 1.13em; color: #374151; }
-        .contact a { color: #1976d2; text-decoration: none; margin-right: 18px; transition: color 0.2s; }
-        .contact a:hover { color: #0d47a1; text-decoration: underline; }
-        .section { margin-bottom: 2.3em; }
-        h2 { color: #1565c0; border-bottom: 2px solid #e3eafc; padding-bottom: 6px; margin-bottom: 18px; font-size: 1.35em; letter-spacing: 1px; }
-        ul { padding-left: 22px; }
-        .job-title { font-weight: bold; color: #1976d2; font-size: 1.08em; }
-        .company { font-weight: bold; color: #374151; }
-        .date { color: #888; font-size: 0.97em; }
-        .skills-list { columns: 2; -webkit-columns: 2; -moz-columns: 2; }
-        li { margin-bottom: 0.5em; line-height: 1.6; }
-        .section ul { margin-top: 0; }
-        .section:last-child { margin-bottom: 0; }
-        .download-btn { display: inline-block; background: #1976d2; color: #fff; padding: 10px 22px; border-radius: 6px; font-size: 1.08em; font-weight: 500; text-decoration: none; margin-bottom: 24px; transition: background 0.2s; box-shadow: 0 2px 8px rgba(44,62,80,0.08); }
-        .download-btn:hover { background: #0d47a1; }
-        @media (max-width: 700px) {
-            .container { padding: 18px 6px; }
-            .skills-list { columns: 1; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1a202c;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
         }
-        @media (max-width: 400px) {
-            h1 { font-size: 1.5em; }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            border-radius: 12px;
+            overflow: hidden;
         }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+        
+        .header .subtitle {
+            font-size: 1.2em;
+            font-weight: 300;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+            font-size: 0.95em;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+            transition: all 0.3s;
+        }
+        
+        .contact-info a:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section:last-child {
+            margin-bottom: 0;
+        }
+        
+        h2 {
+            font-size: 1.5em;
+            font-weight: 600;
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .summary {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #4a5568;
+        }
+        
+        .job {
+            margin-bottom: 30px;
+            padding-left: 20px;
+            border-left: 3px solid #e2e8f0;
+        }
+        
+        .job-header {
+            margin-bottom: 12px;
+        }
+        
+        .job-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #2d3748;
+        }
+        
+        .company {
+            font-weight: 600;
+            color: #667eea;
+        }
+        
+        .date {
+            color: #718096;
+            font-size: 0.9em;
+            font-style: italic;
+        }
+        
+        .achievements {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .achievements li {
+            padding-left: 25px;
+            margin-bottom: 10px;
+            position: relative;
+            color: #4a5568;
+            line-height: 1.7;
+        }
+        
+        .achievements li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .skill-category {
+            background: #f7fafc;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .skill-category strong {
+            color: #2d3748;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            margin: 4px 4px 4px 0;
+        }
+        
+        .opensource-item {
+            background: #f7fafc;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid #48bb78;
+        }
+        
+        .opensource-item h4 {
+            color: #2d3748;
+            margin-bottom: 8px;
+        }
+        
+        .opensource-item a {
+            color: #667eea;
+            text-decoration: none;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        .opensource-item a:hover {
+            text-decoration: underline;
+        }
+        
+        .cert-badge {
+            background: #fef5e7;
+            border: 2px solid #f39c12;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        
+        .cert-badge strong {
+            color: #d68910;
+        }
+        
         @media print {
-            .download-btn { display: none; }
-            body { background: #fff !important; }
-            .container { box-shadow: none !important; border-radius: 0 !important; }
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            .header {
+                background: #667eea;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .header {
+                padding: 30px 20px;
+            }
+            .header h1 {
+                font-size: 2em;
+            }
+            .content {
+                padding: 20px;
+            }
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
-    <script>
-      function downloadPDF() {
-        window.print();
-      }
-    </script>
 </head>
 <body>
     <div class="container">
-        <a class="download-btn" href="#" onclick="downloadPDF()">Download as PDF</a>
-        <h1>SAURABH NIGAM</h1>
-        <div class="contact">
-            Bengaluru, India | <a href="mailto:saurabhnigam999@gmail.com">saurabhnigam999@gmail.com</a> | +91 9654309679<br>
-            <a href="https://linkedin.com/in/saurabh-nigam-b55a1197">LinkedIn</a> |
-            <a href="https://github.com/saurabnigam">GitHub</a> |
-            <a href="https://stackoverflow.com/users/14176456/saurabh-nigam">Stack Overflow</a>
+        <div class="header">
+            <h1>SAURABH NIGAM</h1>
+            <div class="subtitle">Engineering Manager | Data Infrastructure &amp; Platform Engineering</div>
+            <div class="contact-info">
+                <span>📍 Bengaluru, India</span>
+                <a href="mailto:saurabhnigam999@gmail.com">📧 Email</a>
+                <a href="tel:+919654309679">📱 +91 9654309679</a>
+                <a href="https://linkedin.com/in/saurabh-nigam-b55a1197" target="_blank">💼 LinkedIn</a>
+                <a href="https://github.com/saurabnigam" target="_blank">💻 GitHub</a>
+                <a href="https://stackoverflow.com/users/14176456/saurabh-nigam" target="_blank">🔗 Stack Overflow</a>
+            </div>
         </div>
 
-        <div class="section">
-            <h2>Summary</h2>
-            <p>Results-driven Engineering Manager with 10+ years of experience in software architecture, design, and development of scalable, high-performance systems. Proven ability to lead the end-to-end lifecycle of software projects, from architectural design and implementation to deployment and optimization. Expertise in microservices architecture, distributed systems, and cloud-native technologies. Passionate about building robust, reliable, and maintainable software solutions that drive business growth.</p>
-        </div>
+        <div class="content">
+            <div class="section">
+                <h2>Summary</h2>
+                <p class="summary">
+                    Engineering Manager with <strong>10 years</strong> of experience designing, building, and leading teams for large-scale distributed systems, cloud-native infrastructure, and high-performance data platforms. Lead an 18-person backend, platform, and BI engineering org at Zeta through 2 team leads, owning the architecture, delivery, and people strategy behind mission-critical, bank-grade financial data infrastructure. Earned Zeta's <strong>Outstanding rating (2024-2025)</strong> as an EM for organisational impact and delivery of roughly 1.5× expected output. Deep expertise in microservices, event-driven architecture, Kubernetes, and distributed data processing (Kafka, Spark), paired with early, hands-on adoption of AI-assisted and eval-driven engineering workflows.
+                </p>
+            </div>
 
-        <div class="section">
-            <h2>Professional Experience</h2>
+            <div class="section">
+                <h2>Core Leadership &amp; Technical Competencies</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <strong>People Leadership</strong>
+                        <span class="badge">Manager of Managers</span>
+                        <span class="badge">Hiring &amp; Mentoring</span>
+                        <span class="badge">Performance Management</span>
+                        <span class="badge">Org Design</span>
+                        <span class="badge">Agile</span>
+                    </div>
+                    <div class="skill-category">
+                        <strong>System Architecture</strong>
+                        <span class="badge">Distributed Systems</span>
+                        <span class="badge">Microservices</span>
+                        <span class="badge">Event-Driven</span>
+                        <span class="badge">Data Mesh</span>
+                        <span class="badge">BIAN</span>
+                    </div>
+                    <div class="skill-category">
+                        <strong>Backend &amp; Data</strong>
+                        <span class="badge">Java</span>
+                        <span class="badge">Spring Boot</span>
+                        <span class="badge">PostgreSQL</span>
+                        <span class="badge">Redis</span>
+                        <span class="badge">REST APIs</span>
+                    </div>
+                    <div class="skill-category">
+                        <strong>Data &amp; Cloud</strong>
+                        <span class="badge">dbt</span>
+                        <span class="badge">Redshift</span>
+                        <span class="badge">Kafka</span>
+                        <span class="badge">Spark</span>
+                        <span class="badge">Trino</span>
+                        <span class="badge">Airflow</span>
+                        <span class="badge">AWS</span>
+                        <span class="badge">Kubernetes</span>
+                        <span class="badge">Docker</span>
+                    </div>
+                    <div class="skill-category">
+                        <strong>AI Engineering</strong>
+                        <span class="badge">Agent Harness</span>
+                        <span class="badge">LangChain</span>
+                        <span class="badge">Claude</span>
+                        <span class="badge">Eval-Driven Engineering</span>
+                    </div>
+                </div>
+            </div>
 
-            <p><span class="job-title">Engineering Manager</span> <span class="company">@ Zeta</span> <span class="date">(Jan 2024 &ndash; Present)</span></p>
-            <ul>
-                <li>Leading a team of 18 engineers (software developers and business intelligence engineers) in Team Pontus.</li>
-                <li>Hired and mentored new developers across the organization.</li>
-                <li>Spearheaded the creation of data marts for Zeta, optimizing reporting and analytics for credit, loans, and financial data. Improved ETL pipelines for faster data processing and real-time reporting.</li>
-                <li>Designed and implemented DBT CI/CD pipelines to improve deployment efficiency and enforce data quality checks.</li>
-                <li>Optimized Amazon Redshift for large-scale analytics, reducing query latency by 40%.</li>
-                <li>Led the adoption of a data mesh architecture, improving data ownership and accessibility across teams. Developed and enforced data contracts, ensuring high data integrity and consistency.</li>
-            </ul>
+            <div class="section">
+                <h2>Professional Experience</h2>
+                
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">Engineering Manager, Data Infrastructure (Team Pontus)</div>
+                        <div><span class="company">Zeta</span> <span class="date">• Jan 2024 – Present • Bengaluru, India</span></div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Lead an <strong>18-person backend, platform, and BI engineering</strong> organisation through 2 direct-report team leads — owning org-wide technical strategy, hiring, mentoring pathways, and performance management</li>
+                        <li>Earned Zeta's <strong>Outstanding rating (2024-2025)</strong> as an Engineering Manager — recognised for organisational impact, platform modernisation, and delivery of <strong>~1.5× expected output</strong></li>
+                        <li>Own architecture and roadmap for mission-critical, bank-grade financial data platforms (credit & loans) serving <strong>5-6 enterprise banking customers</strong>, enabling faster analytics and operational reporting</li>
+                        <li>Drove a <strong>DBT + Redshift performance initiative</strong> that cut a critical analytics workload's runtime from 2 hours to under 30 minutes (<strong>70% reduction</strong>), improving reporting SLAs and service reliability</li>
+                        <li>Led org-wide adoption of <strong>Data Mesh</strong> and enforced <strong>data contracts</strong> — decentralising ownership and reducing schema breaks across hundreds of downstream services</li>
+                        <li>Built an <strong>AI lineage and incident-triage agent</strong> (LangChain + Claude) parsing dbt manifests to isolate root causes (<strong>80% accuracy, eval-measured</strong>), and established eval-driven engineering with business unit test coverage across pipeline and agent code</li>
+                    </ul>
+                </div>
 
-            <p><span class="job-title">Lead Software Developer</span> <span class="company">@ Zeta</span> <span class="date">(2021 &ndash; Dec 2023)</span></p>
-            <ul>
-                <li>Led the Productionization of the loans system for HDFC Bank with a 5-member team.</li>
-                <li>Architected a high-throughput, event-driven system using Kafka, Spring Boot, PostgreSQL, and Redis. Improved system reliability by implementing fault-tolerant microservices. Optimized SQL queries and database indexing, reducing query execution time by 50%.</li>
-                <li>Collaborated with cross-functional teams, including Product, QA, and SRE and Release Teams.</li>
-            </ul>
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">Lead Software Developer</div>
+                        <div><span class="company">Zeta</span> <span class="date">• 2021 – Dec 2023</span></div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Led a <strong>5-engineer team</strong> delivering a mission-critical, fault-tolerant loan servicing platform for <strong>HDFC Bank</strong>, one of India's largest private banks</li>
+                        <li>Architected a high-throughput, event-driven system (Kafka, Spring Boot, PostgreSQL, Redis) handling large-scale financial transactions</li>
+                        <li>Improved <strong>SQL performance by 50%</strong> through indexing, query refactoring, and data modelling</li>
+                        <li>Partnered with Product, SRE, and Release Engineering to deliver robust, regulated financial systems</li>
+                    </ul>
+                </div>
 
-            <p><span class="job-title">Senior Software Engineer</span> <span class="company">@ FarEye</span> <span class="date">(2016 &ndash; 2021)</span></p>
-            <ul>
-                <li>Designed and deployed microservices for scalable, real-time logistics solutions.</li>
-                <li>Led Kubernetes adoption, streamlining deployment workflows.</li>
-                <li>Developed a notification and alerting system, improving response time for business-critical incidents.</li>
-                <li>Built a data lake for real-time analytics using Apache Spark and Kafka.</li>
-                <li>Spearheaded performance optimization initiatives, improving system throughput by 60%.</li>
-            </ul>
-        </div>
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">Senior Software Engineer</div>
+                        <div><span class="company">FarEye</span> <span class="date">• 2016 – 2021</span></div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Designed and built core Java microservices for real-time, global-scale logistics and delivery operations</li>
+                        <li>Led the migration to <strong>Kubernetes</strong> — enabling scalable, containerised deployments and faster release velocity</li>
+                        <li>Built a real-time data pipeline (Spark + Kafka) that improved <strong>system throughput by 60%</strong> + added a platform-wide alerting and notification system that improved observability and incident response</li>
+                    </ul>
+                </div>
+            </div>
 
-        <div class="section">
-            <h2>Technical Expertise</h2>
-            <ul class="skills-list">
-                <li><strong>Engineering Leadership:</strong> Team Management, Hiring, Technical Architecture, Agile Methodologies</li>
-                <li><strong>Architecture &amp; System Design:</strong> Microservices, Data Mesh, Event-Driven Architecture, Data Contracts</li>
-                <li><strong>Data Infrastructure:</strong> Data Mesh, DBT, Redshift, Kafka, Apache Spark, Trino</li>
-                <li><strong>Backend Development:</strong> Java, Spring Boot, Microservices, Event-Driven Architecture, PostgreSQL, Redis</li>
-                <li><strong>Cloud &amp; DevOps:</strong> Kubernetes, Docker, AWS, CI/CD, Jenkins, Airflow</li>
-            </ul>
-        </div>
+            <div class="section">
+                <h2>Open Source &amp; Publications</h2>
+                <div class="opensource-item">
+                    <h4>dbt-coverage</h4>
+                    <a href="https://github.com/saurabnigam/dbt-coverage" target="_blank">github.com/saurabnigam/dbt-coverage</a>
+                    <p>Built and open-sourced a dbt test coverage framework, adopted at Zeta to improve data quality visibility and enforce CI/CD quality gates.</p>
+                </div>
+                <div class="opensource-item">
+                    <h4>Keploy Java SDK (Initial Developer Contributor)</h4>
+                    <a href="https://github.com/keploy/java-sdk" target="_blank">github.com/keploy/java-sdk</a>
+                    <p>Initial developer contributor to the Keploy Java SDK for API testing and mocking.</p>
+                </div>
+                <div style="margin-top: 20px;">
+                    <strong>Paper:</strong> "Survey and Evaluation of Food Recommendation" — IEEE INDIACom-2016 (ISSN: 0973-7529)
+                </div>
+            </div>
 
-        <div class="section">
-            <h2>Publication</h2>
-            <ul>
-                <li>Published &ldquo;Survey and Evaluation of Food Recommendation&rdquo; at IEEE INDIACom-2016. (ISSN: 0973-7529, ISBN: 978-93-80544-20-5)</li>
-            </ul>
-        </div>
+            <div class="section">
+                <h2>Certifications</h2>
+                <div class="cert-badge">
+                    <strong>🏆 BIAN Banking Architecture Foundation</strong> — BIAN Services GmbH (July 2025)
+                </div>
+            </div>
 
-        <div class="section">
-            <h2>Education</h2>
-            <ul>
-                <li>Bachelor of Technology in Computer Science Engineering<br>
-                    Maharaja Agrasen Institute of Technology, New Delhi | 2012 - 2016 | 80.35%</li>
-            </ul>
+            <div class="section">
+                <h2>Education</h2>
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">B.Tech, Computer Science Engineering</div>
+                        <div>Maharaja Agrasen Institute of Technology, New Delhi <span class="date">• 2012 – 2016 • 80.35%</span></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
