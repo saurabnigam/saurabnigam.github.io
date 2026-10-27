@@ -396,7 +396,7 @@ check "git ran with GIT_TERMINAL_PROMPT=0" has "$LOG" "env GIT_TERMINAL_PROMPT=0
 check "git ran with the global config switched off" has "$LOG" "env GIT_CONFIG_GLOBAL=/dev/null"
 check "git never saw the caller's HOME" lacks "$LOG" "env HOME=decoy"
 check "the askpass helper answers a password prompt with the token" eq "$(cat "$SHIM_PW")" "$SHIM_TOKEN"
-check "the askpass helper answers a username prompt without the token" eq "$(cat "$SHIM_USER")" "x-access-token"
+check "the askpass helper answers a username prompt with the repo owner" eq "$(cat "$SHIM_USER")" "saurabnigam"
 check "the remote URL is passed as given (no credentials in it)" has "$LOG" "arg: $REMOTE"
 check "the askpass helper gives the token to no other host" eq "$(tr -d '\n' < "$SHIM_OTHER")" ""
 
@@ -417,6 +417,15 @@ run env -u MY_SITES_GH_TOKEN PATH="$T/kc:$T/shim:$PATH" \
   "$PUBLISH" family kc-page "$SRC4"
 check "keychain token: publish exits 0" eq "$RC" 0
 check "keychain token reaches the askpass helper" eq "$(cat "$SHIM_PW")" "$SHIM_TOKEN"
+
+# The username follows the owner of the target repo.
+rm -f "$SHIM_USER"
+run env PATH="$T/shim:$PATH" MY_SITES_GH_TOKEN="$SHIM_TOKEN" MY_SITES_FAMILY_REPO="someone/else-apps" \
+  HOME="$HOME_DECOY" TMPDIR="$PUBTMP" MY_SITES_REMOTE_URL="$REMOTE" \
+  MY_SITES_GIT_NAME="Test Publisher" MY_SITES_GIT_EMAIL="publisher@example.invalid" \
+  "$PUBLISH" family owner-page "$SRC4"
+check "another repo owner: publish exits 0" eq "$RC" 0
+check "another repo owner: the username is that owner" eq "$(cat "$SHIM_USER")" "someone"
 check "keychain token is not in the output" lacks "$OUT" "$SHIM_TOKEN"
 check "keychain token is not in any git argument" lacks "$(cat "$SHIM_LOG")" "$SHIM_TOKEN"
 

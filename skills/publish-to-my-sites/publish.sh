@@ -304,11 +304,13 @@ case "$1" in
   *) exit 0 ;;
 esac
 case "$1" in
-  Username*) printf '%s\n' "x-access-token" ;;
+  Username*) printf '%s\n' "${MY_SITES_ASKPASS_USER:-}" ;;
   *) printf '%s\n' "${MY_SITES_GH_TOKEN:-}" ;;
 esac
 EOF
   chmod 700 "$WORK/askpass.sh"
+  # GitHub's documented HTTPS login: the account name, with the token as password.
+  export MY_SITES_ASKPASS_USER="${REPO%%/*}"
   export GIT_ASKPASS="$WORK/askpass.sh"
   export GIT_TERMINAL_PROMPT=0
   export GIT_CONFIG_NOSYSTEM=1

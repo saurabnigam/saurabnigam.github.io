@@ -82,6 +82,31 @@ This laptop's default `gh` / git login is a work account. Never use it for these
 
 If `main` has branch protection that requires pull requests, the token cannot push to it. Either allow it or publish through a different flow.
 
+### (b2) First push only: a short-lived bootstrap token
+
+Both repos add a file in `.github/workflows/`. GitHub refuses a push that creates or changes a workflow file unless the token also has the **Workflows** permission. The publish token from (b) deliberately lacks it, so agents can never change a workflow. Use a second token for the first push, and again for any later push that edits a workflow.
+
+1. Create a fine-grained token as in (b), for the same two repositories. Permissions: **Contents: Read and write** and **Workflows: Read and write**. Expiry: 1 day.
+2. Store it in the keychain:
+
+   ```
+   security add-generic-password -a "$USER" -s MY_SITES_BOOTSTRAP_TOKEN -w
+   ```
+
+3. Push this branch. The credential helper reads the keychain, so the token is never in the command or the shell history. The empty `credential.helper=` first switches off the stored work login:
+
+   ```
+   git -c credential.helper= -c credential.helper='!f() { echo username=saurabnigam; echo "password=$(security find-generic-password -w -s MY_SITES_BOOTSTRAP_TOKEN)"; }; f' push -u origin add-showcase-publishing
+   ```
+
+   For `family-apps`, first run `git remote add origin https://github.com/saurabnigam/family-apps.git`, then the same command with `push -u origin main`.
+
+4. Delete the token on GitHub (Settings → Developer settings → Fine-grained tokens), then remove it from the keychain:
+
+   ```
+   security delete-generic-password -s MY_SITES_BOOTSTRAP_TOKEN
+   ```
+
 ### (c) Set the commit identity
 
 Commits made by `publish.sh` never use the global git identity (it is a work identity). Set:
