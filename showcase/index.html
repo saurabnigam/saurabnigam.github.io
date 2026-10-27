@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Showcase — Saurabh Nigam</title>
+<meta name="description" content="Small pages and tools built by Saurabh Nigam.">
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: #f6f7f9;
+  --fg: #1c2330;
+  --muted: #5b6577;
+  --card: #ffffff;
+  --border: #dde1e8;
+  --accent: #3b5bdb;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12151c;
+    --fg: #e6e9ef;
+    --muted: #9aa4b5;
+    --card: #1b2029;
+    --border: #2b3240;
+    --accent: #8ea2ff;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+main { max-width: 42rem; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+a { color: var(--accent); }
+.back { display: inline-block; margin-bottom: 1.5rem; text-decoration: none; }
+.back:hover { text-decoration: underline; }
+h1 { margin: 0 0 0.25rem; font-size: 1.8rem; line-height: 1.2; }
+.lede { margin: 0 0 2rem; color: var(--muted); }
+ul.listing { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.75rem; }
+ul.listing li {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+}
+ul.listing li a { font-weight: 600; font-size: 1.05rem; text-decoration: none; }
+ul.listing li a:hover { text-decoration: underline; }
+ul.listing .meta { margin-left: 0.5rem; color: var(--muted); font-size: 0.85rem; }
+ul.listing p { margin: 0.35rem 0 0; color: var(--muted); }
+ul.listing li.empty { color: var(--muted); border-style: dashed; background: transparent; }
+footer { margin-top: 3rem; color: var(--muted); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="/">&larr; Back to resume</a>
+  <h1>Showcase</h1>
+  <p class="lede">Small pages and tools I have built.</p>
+  <!-- listing:start -->
+  <ul class="listing">
+    <li class="empty">Nothing here yet.</li>
+  </ul>
+  <!-- listing:end -->
+  <footer>No cookies, no analytics.</footer>
+</main>
+</body>
+</html>
