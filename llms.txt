@@ -1,0 +1,66 @@
+# Rules for agents publishing to saurabnigam.github.io
+
+THIS SITE IS PUBLIC. Anyone on the internet can read every page you publish
+here. Search engines will index it.
+
+Never publish any of these:
+- phone numbers or a home address
+- names or photos of family members
+- ID numbers (Aadhaar, PAN, passport, driving licence, and similar)
+- financial data (accounts, cards, balances, holdings, tax details)
+- health data
+- passwords, tokens, API keys or private keys
+
+If a page needs any of the above, stop and tell the human. Family-only content
+belongs in the private family site, not here.
+
+## Where things live
+
+- Repository: saurabnigam/saurabnigam.github.io
+- Branch: main
+- Each page is a folder: showcase/<slug>/index.html
+- The slug uses lower-case letters, digits and single hyphens only. Examples:
+  mortgage-calculator, trip-2026. It must match ^[a-z0-9]+(-[a-z0-9]+)*$.
+- Folders starting with "_" or "." are ignored by the site builder.
+
+## Page contract
+
+- One self-contained index.html per page. Inline the CSS and JavaScript.
+- Optional assets (images, data files) go inside the same folder. Reference them
+  with relative paths such as ./chart.png.
+- No external trackers, analytics, CDN scripts or external fonts.
+- The page must work when opened as a plain file, with no build step.
+- File names inside the folder use only letters, digits, ".", "_", "-" and "/".
+- Required in <head>:
+  - <title>Short, human title</title>
+  - <meta name="description" content="One sentence about the page">
+  - <meta name="created" content="YYYY-MM-DD">
+- Optional: <meta name="draft" content="true">. A draft is published but not
+  listed on the showcase page.
+- The showcase listing and showcase/index.json are generated at deploy time from
+  these tags. Do not write them by hand.
+
+## Files you must never edit
+
+- index.html (the resume, at the repository root)
+- showcase/index.html
+- llms.txt
+- .github/
+- scripts/
+- CNAME
+- anything else outside showcase/<slug>/
+
+## How to publish
+
+1. Use the publish-to-my-sites skill: publish.sh public ... (see its SKILL.md).
+   Public pages need the --confirm-public flag. Use that flag only when the
+   human has explicitly asked for a public page.
+2. Do NOT use git or gh with the default login on this laptop. That login is a
+   work account. The skill uses a separate token (MY_SITES_GH_TOKEN) for the
+   personal account.
+3. Never commit secrets.
+4. After the push, the site redeploys in about 1 to 3 minutes. Tell the human
+   the URL:
+   https://saurabnigam.github.io/showcase/<slug>/
+   The base URL will change when the custom domain goes live. The skill reads
+   MY_SITES_PUBLIC_URL, so use the URL that publish.sh prints.
