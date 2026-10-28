@@ -13,6 +13,8 @@ A sibling private repo, `saurabnigam/family-apps`, serves family-only apps behin
 
 ```
 index.html                  the resume (edit by hand only)
+resume.json                 the same resume as JSON Resume (v1.0.0) for tools and agents
+Saurabh-Nigam-Resume.pdf    the print version of the resume (2 pages, A4), linked from the page
 showcase/index.html         listing page; the list between the markers is generated
 showcase/<slug>/index.html  one published page, plus optional assets in the same folder
 llms.txt                    rules for any agent that publishes here

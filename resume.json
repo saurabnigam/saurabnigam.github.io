@@ -1,0 +1,226 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Saurabh Nigam",
+    "label": "Engineering Manager, Data & ML Platforms",
+    "email": "saurabhnigam999@gmail.com",
+    "url": "https://saurabnigam.github.io/",
+    "summary": "Engineering Manager since 2024, with 10+ years in engineering across distributed systems and data platforms, 5 of them in technical leadership. Led Team Pontus, an 18-person organisation run through 2 team leads, setting its engineering process and owning architecture for bank-grade data platforms serving 5 to 6 enterprise banking customers. Rated Outstanding in two consecutive cycles (2024-25 and 2025-26). Now leads Zeta's Metis change data capture (CDC) replication and Elara ML infrastructure teams, drives architecture for an in-house lakehouse and builds AI agents and agent harnesses hands-on.",
+    "location": {
+      "city": "Bengaluru",
+      "region": "Karnataka",
+      "countryCode": "IN"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "saurabh-nigam-b55a1197",
+        "url": "https://www.linkedin.com/in/saurabh-nigam-b55a1197"
+      },
+      {
+        "network": "GitHub",
+        "username": "saurabnigam",
+        "url": "https://github.com/saurabnigam"
+      },
+      {
+        "network": "Stack Overflow",
+        "username": "saurabh-nigam",
+        "url": "https://stackoverflow.com/users/14176456/saurabh-nigam"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Zeta",
+      "position": "Engineering Manager, Data & ML Platforms",
+      "location": "Bengaluru, India",
+      "startDate": "2024-01-01",
+      "summary": "Scope moved in 2026 from credit and loans data platforms (Team Pontus) to data replication and ML infrastructure platforms (Metis, Elara). Hands-on in design, architecture and code review (Java, Python).",
+      "highlights": [
+        "[Metis and Elara platforms, 2026 to present] Leads two infrastructure platform teams: Metis for streaming change data capture (CDC) replication on Debezium, Kafka and Kubernetes operators; Elara for a Jupyter notebook platform and full-stack ML inference apps.",
+        "[Metis and Elara platforms, 2026 to present] Drives the architecture for an in-house lakehouse and transformation platform, with Spark and Redshift as interchangeable execution engines behind one interface.",
+        "[Metis and Elara platforms, 2026 to present] Defines CI/CD as a first-class product for internal teams, kept deliberately separate from application CI/CD.",
+        "[Metis and Elara platforms, 2026 to present] Owns roadmaps, SLAs and 24x7 reliability for both platforms with Product, SRE and Release Engineering.",
+        "[Metis and Elara platforms, 2026 to present] Heads end-to-end far-site disaster recovery for the Metis replication platform, which feeds downstream data and ML systems.",
+        "[Team Pontus, Jan 2024 to 2026] Led an 18-person backend, platform and BI engineering org through 2 team leads, owning hiring, calibration and performance management, with 0% attrition and zero major production incidents in H1 2026.",
+        "[Team Pontus, Jan 2024 to 2026] Set the engineering process across teams, from quarterly capacity planning and CI coverage gates to enforced data contracts that reduced schema breaks across hundreds of downstream services.",
+        "[Team Pontus, Jan 2024 to 2026] Conceived and architected a declarative Kubernetes operator, built by the team, that replaced per-team operators, cut tenant onboarding from weeks to minutes and was adopted by 6 internal product lines.",
+        "[Team Pontus, Jan 2024 to 2026] Directed the team that cut the largest aggregate models from 15+ to under 2 minutes and a large private bank's end-of-day batch from ~1.5 hours to ~35 minutes.",
+        "[Team Pontus, Jan 2024 to 2026] Wrote the Redshift Serverless risk analysis that paused a premature migration, then guided a tenant-isolated rollout; the team halved base capacity from 128 to 64 RPUs, cutting infrastructure cost.",
+        "[AI-native engineering, 2024 to present] Built and open-sourced dbt-coverage with AI coding: a dbt and SQL test-coverage tool adopted at Zeta as a CI/CD quality gate.",
+        "[AI-native engineering, 2024 to present] Launched a prompt-to-PR dbt harness for analytics engineers that turns a requirement into a tested, documented, quality-gated pull request, with an eval loop scoring agent skills against task suites.",
+        "[AI-native engineering, 2024 to present] Built an AI lineage and incident-triage agent (LangChain, Claude) that uses dbt manifests to isolate root causes of pipeline failures, with ~80% accuracy on evals.",
+        "[AI-native engineering, 2024 to present] Created a demand-deposit datamart for a new strategic client in one week with AI-assisted development, then anchored it technically until the client's dedicated team was hired."
+      ]
+    },
+    {
+      "name": "Zeta",
+      "position": "Lead Software Developer",
+      "startDate": "2021-01-01",
+      "highlights": [
+        "Led and mentored a 5-engineer team that delivered a fault-tolerant loan servicing platform for HDFC Bank, one of India's largest private banks.",
+        "Architected a high-throughput, event-driven financial transaction system on Kafka, Spring Boot, PostgreSQL and Redis.",
+        "Improved SQL performance by ~50% through indexing, query refactoring and data modelling.",
+        "Partnered with Product, SRE and Release Engineering on testing, monitoring and release processes for regulated banking systems."
+      ],
+      "endDate": "2023-12-01"
+    },
+    {
+      "name": "FarEye",
+      "position": "Senior Software Engineer",
+      "startDate": "2016-01-01",
+      "highlights": [
+        "Designed and built core Java microservices for real-time, global-scale logistics and delivery operations.",
+        "Led the migration to Kubernetes, enabling containerised deployments and faster release velocity.",
+        "Built a real-time Spark and Kafka data pipeline that improved system throughput by ~60%.",
+        "Introduced a platform-wide alerting and notification system that improved observability and incident response."
+      ],
+      "endDate": "2021-01-01"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Maharaja Agrasen Institute of Technology",
+      "area": "Computer Science Engineering",
+      "studyType": "B.Tech, Computer Science Engineering",
+      "startDate": "2012-01-01",
+      "endDate": "2016-01-01",
+      "score": "80.35%"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "BIAN Banking Architecture Foundation",
+      "issuer": "BIAN Services GmbH",
+      "date": "Jul 2025"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Survey and Evaluation of Food Recommendation",
+      "publisher": "IEEE INDIACom-2016",
+      "releaseDate": "2016",
+      "summary": "ISSN 0973-7529"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Engineering Leadership",
+      "keywords": [
+        "Manager of managers",
+        "Hiring and team building",
+        "Developing team leads",
+        "Org design",
+        "Performance management and rubric-driven calibration",
+        "Roadmap and capacity planning",
+        "Engineering process and SDLC",
+        "Architecture review",
+        "Stakeholder and executive communication",
+        "Cross-functional delivery"
+      ]
+    },
+    {
+      "name": "Data Platform",
+      "keywords": [
+        "dbt",
+        "Amazon Redshift (provisioned and Serverless)",
+        "Apache Spark",
+        "Trino (Presto)",
+        "Apache Airflow",
+        "Apache Iceberg",
+        "Delta Lake",
+        "AWS Glue and Amazon Athena",
+        "Lakehouse architecture",
+        "Data mesh and data contracts"
+      ]
+    },
+    {
+      "name": "Platform Engineering and Distributed Systems",
+      "keywords": [
+        "Apache Kafka",
+        "Debezium",
+        "Change data capture (CDC)",
+        "Kubernetes and Kubernetes operators",
+        "AWS",
+        "Infrastructure as code",
+        "CI/CD as a product (Jenkins, GitHub Actions)",
+        "Canary rollouts and quality gates",
+        "Disaster recovery",
+        "Observability, monitoring and SLAs"
+      ]
+    },
+    {
+      "name": "AI and ML Engineering",
+      "keywords": [
+        "Claude Code",
+        "MCP (Model Context Protocol)",
+        "Pydantic AI",
+        "LangChain",
+        "AI agents",
+        "Agent harness design",
+        "LLM evals and eval harnesses",
+        "Eval-driven engineering",
+        "Jupyter",
+        "ML inference apps"
+      ]
+    },
+    {
+      "name": "Languages and Backend",
+      "keywords": [
+        "Java",
+        "Python",
+        "SQL",
+        "Spring Boot",
+        "REST APIs",
+        "PostgreSQL",
+        "Redis",
+        "Event-driven microservices",
+        "Docker"
+      ]
+    },
+    {
+      "name": "Domain",
+      "keywords": [
+        "Regulated banking",
+        "Credit and loans",
+        "Payments",
+        "BIAN banking architecture",
+        "Multi-tenant fintech SaaS"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "dbt-coverage",
+      "description": "Test-coverage and quality-gate tool for dbt and SQL projects, built end to end with AI coding and adopted at Zeta as a CI/CD gate.",
+      "url": "https://github.com/saurabnigam/dbt-coverage",
+      "roles": [
+        "Author"
+      ],
+      "type": "open source"
+    },
+    {
+      "name": "llm-evals-engineering-course",
+      "description": "A 17-module, ~48-hour course on building LLM evaluation systems: LLM-as-judge design, agent and trajectory evals, CI/CD eval gates and benchmark contamination. Every claim is source-linked.",
+      "url": "https://github.com/saurabnigam/llm-evals-engineering-course",
+      "roles": [
+        "Author"
+      ],
+      "type": "open source"
+    },
+    {
+      "name": "Keploy Java SDK",
+      "description": "Open-source Java SDK for Keploy, an API testing and mocking tool.",
+      "url": "https://github.com/keploy/java-sdk",
+      "roles": [
+        "Initial developer and contributor"
+      ],
+      "type": "open source"
+    }
+  ],
+  "meta": {
+    "canonical": "https://saurabnigam.github.io/resume.json",
+    "version": "2026-10-28",
+    "lastModified": "2026-10-28"
+  }
+}
