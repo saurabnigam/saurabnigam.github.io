@@ -1,402 +1,604 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saurabh Nigam - Engineering Manager | Data Infrastructure & Platform Engineering</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body { 
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            color: #1a202c;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: #ffffff;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            border-radius: 12px;
-            overflow: hidden;
-        }
-        
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 50px 40px;
-            text-align: center;
-        }
-        
-        .header h1 {
-            font-size: 2.5em;
-            font-weight: 700;
-            margin-bottom: 10px;
-            letter-spacing: -0.5px;
-        }
-        
-        .header .subtitle {
-            font-size: 1.2em;
-            font-weight: 300;
-            margin-bottom: 20px;
-            opacity: 0.95;
-        }
-        
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 20px;
-            font-size: 0.95em;
-        }
-        
-        .contact-info a {
-            color: white;
-            text-decoration: none;
-            padding: 8px 16px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 20px;
-            transition: all 0.3s;
-        }
-        
-        .contact-info a:hover {
-            background: rgba(255,255,255,0.3);
-            transform: translateY(-2px);
-        }
-        
-        .content {
-            padding: 40px;
-        }
-        
-        .section {
-            margin-bottom: 40px;
-        }
-        
-        .section:last-child {
-            margin-bottom: 0;
-        }
-        
-        h2 {
-            font-size: 1.5em;
-            font-weight: 600;
-            color: #667eea;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        
-        .summary {
-            font-size: 1.05em;
-            line-height: 1.8;
-            color: #4a5568;
-        }
-        
-        .job {
-            margin-bottom: 30px;
-            padding-left: 20px;
-            border-left: 3px solid #e2e8f0;
-        }
-        
-        .job-header {
-            margin-bottom: 12px;
-        }
-        
-        .job-title {
-            font-size: 1.2em;
-            font-weight: 600;
-            color: #2d3748;
-        }
-        
-        .company {
-            font-weight: 600;
-            color: #667eea;
-        }
-        
-        .date {
-            color: #718096;
-            font-size: 0.9em;
-            font-style: italic;
-        }
-        
-        .achievements {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        .achievements li {
-            padding-left: 25px;
-            margin-bottom: 10px;
-            position: relative;
-            color: #4a5568;
-            line-height: 1.7;
-        }
-        
-        .achievements li:before {
-            content: "▸";
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            font-weight: bold;
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        
-        .skill-category {
-            background: #f7fafc;
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
-        }
-        
-        .skill-category strong {
-            color: #2d3748;
-            display: block;
-            margin-bottom: 8px;
-        }
-        
-        .badge {
-            display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 0.85em;
-            margin: 4px 4px 4px 0;
-        }
-        
-        .opensource-item {
-            background: #f7fafc;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            border-left: 4px solid #48bb78;
-        }
-        
-        .opensource-item h4 {
-            color: #2d3748;
-            margin-bottom: 8px;
-        }
-        
-        .opensource-item a {
-            color: #667eea;
-            text-decoration: none;
-            font-family: 'Courier New', monospace;
-            font-size: 0.9em;
-        }
-        
-        .opensource-item a:hover {
-            text-decoration: underline;
-        }
-        
-        .cert-badge {
-            background: #fef5e7;
-            border: 2px solid #f39c12;
-            border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 10px;
-        }
-        
-        .cert-badge strong {
-            color: #d68910;
-        }
-        
-        @media print {
-            body {
-                background: white;
-                padding: 0;
-            }
-            .container {
-                box-shadow: none;
-                border-radius: 0;
-            }
-            .header {
-                background: #667eea;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-            .header {
-                padding: 30px 20px;
-            }
-            .header h1 {
-                font-size: 2em;
-            }
-            .content {
-                padding: 20px;
-            }
-            .contact-info {
-                flex-direction: column;
-                align-items: center;
-            }
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saurabh Nigam | Engineering Manager, Data &amp; ML Platforms</title>
+<meta name="description" content="Leads the platform teams behind Zeta's CDC replication and ML infrastructure, and the architecture of its lakehouse.">
+<meta name="author" content="Saurabh Nigam">
+<meta name="created" content="2026-10-28">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Saurabh Nigam | Engineering Manager, Data &amp; ML Platforms">
+<meta property="og:description" content="Leads the platform teams behind Zeta's CDC replication and ML infrastructure, and the architecture of its lakehouse.">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://saurabnigam.github.io/">
+<link rel="canonical" href="https://saurabnigam.github.io/">
+<link rel="alternate" type="application/json" href="/resume.json" title="JSON Resume">
+<link rel="alternate" type="application/pdf" href="/Saurabh-Nigam-Resume.pdf">
+<link rel="icon" href="data:,">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Saurabh Nigam",
+  "jobTitle": "Engineering Manager, Data & ML Platforms",
+  "worksFor": { "@type": "Organization", "name": "Zeta" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Bengaluru", "addressCountry": "IN" },
+  "email": "mailto:saurabhnigam999@gmail.com",
+  "url": "https://saurabnigam.github.io/",
+  "sameAs": [
+    "https://www.linkedin.com/in/saurabh-nigam-b55a1197",
+    "https://github.com/saurabnigam",
+    "https://stackoverflow.com/users/14176456/saurabh-nigam"
+  ],
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Maharaja Agrasen Institute of Technology", "address": { "@type": "PostalAddress", "addressLocality": "New Delhi", "addressCountry": "IN" } },
+  "knowsAbout": [
+    "Engineering management",
+    "Data platforms",
+    "ML infrastructure",
+    "Change data capture (CDC)",
+    "Lakehouse architecture",
+    "dbt",
+    "Amazon Redshift",
+    "Apache Spark",
+    "Apache Kafka",
+    "Debezium",
+    "Kubernetes operators",
+    "Apache Iceberg",
+    "CI/CD as a product",
+    "AI agents",
+    "LLM evals and eval harnesses"
+  ],
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "name": "BIAN Banking Architecture Foundation",
+    "credentialCategory": "certification",
+    "dateCreated": "2025-07",
+    "recognizedBy": { "@type": "Organization", "name": "BIAN Services GmbH" }
+  },
+  "description": "Engineering Manager since 2024, with 10+ years in engineering across distributed systems and data platforms, 5 of them in technical leadership. Led Team Pontus, an 18-person organisation run through 2 team leads, setting its engineering process and owning architecture for bank-grade data platforms serving 5 to 6 enterprise banking customers. Rated Outstanding in two consecutive cycles (2024-25 and 2025-26). Now leads Zeta's Metis change data capture (CDC) replication and Elara ML infrastructure teams, drives architecture for an in-house lakehouse and builds AI agents and agent harnesses hands-on."
+}
+</script>
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: #fcfcfa;
+  --ink: #17191d;
+  --ink-2: #363a42;
+  --muted: #595f69;
+  --accent: #1f3a93;
+  --line: #e1e2e5;
+  --line-strong: #c8cbd1;
+  --serif: "Iowan Old Style", "Palatino Linotype", "Source Serif 4", Palatino, Georgia, serif;
+  --sans: "Inter", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121418;
+    --ink: #e7e8ea;
+    --ink-2: #c9ccd2;
+    --muted: #a1a7b1;
+    --accent: #9db1ff;
+    --line: #2a2e36;
+    --line-strong: #3d424c;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #121418;
+  --ink: #e7e8ea;
+  --ink-2: #c9ccd2;
+  --muted: #a1a7b1;
+  --accent: #9db1ff;
+  --line: #2a2e36;
+  --line-strong: #3d424c;
+}
+:root[data-theme="light"] { color-scheme: light; }
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.55;
+  font-feature-settings: "kern" 1;
+  -webkit-font-smoothing: antialiased;
+  overflow-wrap: break-word;
+}
+h1, h2, h3, h4, p, ul { margin: 0; }
+h1, h2, h3, h4, .headline, .tagline, .item-head { text-wrap: balance; }
+.nw { white-space: nowrap; }
+p, li { text-wrap: pretty; }
+cite { font-style: normal; }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 0.2em; text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent); }
+a:hover { text-decoration-color: currentColor; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+svg { flex: none; }
+time, .num, .dates, .period { font-variant-numeric: tabular-nums; }
+.print-only, .print-url { display: none; }
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.skip {
+  position: absolute; left: 16px; top: -64px;
+  padding: 8px 16px; background: var(--bg); color: var(--accent);
+  border: 1px solid var(--accent); z-index: 10;
+}
+.skip:focus { top: 16px; }
+
+.page { max-width: 70rem; margin: 0 auto; padding: 40px 40px 40px; }
+
+/* Masthead */
+.masthead { padding-bottom: 24px; }
+h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.375rem, 1.7rem + 2.6vw, 3.25rem);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+  color: var(--ink);
+}
+.headline { margin-top: 12px; font-size: 1.1875rem; font-weight: 500; letter-spacing: -0.005em; line-height: 1.35; color: var(--ink-2); }
+.tagline { margin-top: 8px; max-width: 40rem; font-size: 1.0625rem; color: var(--ink-2); }
+.loc { margin-top: 16px; display: flex; align-items: center; gap: 8px; font-size: 0.875rem; color: var(--muted); }
+.contact { list-style: none; padding: 0; margin-top: 12px; display: flex; flex-wrap: wrap; gap: 4px 24px; font-size: 0.9375rem; }
+.contact a { display: inline-flex; align-items: center; gap: 8px; padding: 4px 0; text-decoration: none; }
+.contact .t { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.2em; text-decoration-color: color-mix(in srgb, var(--accent) 35%, transparent); }
+.contact a:hover .t { text-decoration-color: currentColor; }
+.contact svg { color: var(--muted); }
+.contact a:hover svg { color: var(--accent); }
+
+/* Grid */
+.layout { display: grid; grid-template-columns: minmax(0, 1fr); row-gap: 40px; }
+.block { border-top: 1px solid var(--accent); padding-top: 12px; }
+h2 {
+  font-family: var(--serif); font-size: 1.5rem; font-weight: 500; line-height: 1.3;
+  letter-spacing: 0.005em; color: var(--ink); margin-bottom: 16px;
+}
+.summary p { font-size: 1.0625rem; line-height: 1.6; color: var(--ink); max-width: 46rem; }
+
+/* Highlights */
+.highlights.block { padding-top: 0; }
+.hl { list-style: none; padding: 0; border-bottom: 1px solid var(--line); }
+.hl li { display: grid; grid-template-columns: 4.75rem minmax(0, 1fr); column-gap: 12px; align-items: baseline; padding: 12px 0; }
+.hl li + li { border-top: 1px solid var(--line); }
+.hl .num { white-space: nowrap; font-family: var(--serif); font-size: 1.625rem; font-weight: 500; color: var(--accent); line-height: 1.1; font-variant-numeric: lining-nums tabular-nums; }
+.hl .lbl { font-size: 0.875rem; line-height: 1.45; color: var(--ink-2); }
+
+/* Experience */
+.role + .role { margin-top: 32px; padding-top: 32px; border-top: 1px solid var(--line); }
+.role-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; column-gap: 16px; row-gap: 2px; }
+.role-head h3 { grid-column: 1; grid-row: 1; }
+.role-head .role-meta { grid-column: 1 / -1; grid-row: 2; }
+.role-head .dates { grid-column: 2; grid-row: 1; }
+h3 { font-size: 1.125rem; font-weight: 650; letter-spacing: -0.01em; line-height: 1.35; color: var(--ink); }
+.role-meta { font-size: 0.9375rem; color: var(--ink-2); }
+.role-meta .org { font-weight: 600; color: var(--ink); }
+.dates { font-size: 0.875rem; color: var(--muted); white-space: nowrap; }
+.intro { margin-top: 8px; font-size: 0.9375rem; color: var(--ink-2); max-width: 34rem; }
+.group { margin-top: 24px; }
+h4 { font-size: 0.9375rem; font-weight: 650; color: var(--ink); line-height: 1.4; }
+h4 .period { margin-left: 0.3em; font-size: 0.875rem; font-weight: 500; color: var(--muted); letter-spacing: 0.01em; white-space: nowrap; }
+.bullets { margin-top: 8px; padding-left: 1.125rem; }
+.role > .bullets { margin-top: 12px; }
+.bullets li { padding-left: 4px; color: var(--ink); max-width: 37rem; }
+.bullets li + li { margin-top: 6px; }
+.bullets li::marker { color: var(--muted); }
+
+/* Rail */
+.skills .sk + .sk { margin-top: 16px; }
+.sk h3 { font-size: 0.875rem; font-weight: 650; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.4; color: var(--muted); margin-bottom: 4px; }
+.inline { list-style: none; padding: 0; margin: 0; font-size: 0.9375rem; line-height: 1.55; color: var(--ink-2); }
+.inline li { display: inline; }
+.inline li:not(:last-child)::after { content: "\00A0\00B7"; color: var(--muted); }
+.items { list-style: none; padding: 0; }
+.items > li + li { margin-top: 16px; }
+.item-head { font-size: 0.9375rem; font-weight: 600; line-height: 1.4; color: var(--ink); }
+.item-head a { display: inline-flex; align-items: center; gap: 4px; }
+.item-head svg { width: 13px; height: 13px; }
+.item-sub { font-size: 0.875rem; color: var(--muted); line-height: 1.5; }
+.item-desc { margin-top: 4px; font-size: 0.9375rem; line-height: 1.55; color: var(--ink-2); }
+
+/* Footer */
+.foot {
+  margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 0.875rem; color: var(--muted);
+}
+.foot p:last-child { margin-left: auto; }
+.foot .sep { padding: 0 0.35em; }
+
+@media screen and (min-width: 900px) {
+  .layout {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    column-gap: 56px;
+    row-gap: 40px;
+    grid-template-rows: auto auto auto auto auto 1fr;
+    grid-template-areas:
+      "summary    highlights"
+      "experience skills"
+      "experience oss"
+      "experience pubs"
+      "experience certs"
+      "experience edu";
+  }
+  .summary { grid-area: summary; }
+  .highlights { grid-area: highlights; }
+  .experience { grid-area: experience; }
+  .skills { grid-area: skills; }
+  .oss { grid-area: oss; }
+  .pubs { grid-area: pubs; }
+  .certs { grid-area: certs; }
+  .edu { grid-area: edu; }
+  .rail { align-self: start; }
+  .bullets { padding-left: 0; }
+  .bullets li { padding-left: 2px; }
+}
+@media screen and (min-width: 560px) and (max-width: 899.98px) {
+  .hl { display: grid; grid-template-columns: 1fr 1fr; column-gap: 24px; }
+  .hl li + li { border-top: 0; }
+  .hl li:nth-child(n+3) { border-top: 1px solid var(--line); }
+}
+@media screen and (max-width: 599.98px) {
+  .page { padding: 32px 16px 24px; }
+  .masthead { padding-bottom: 32px; }
+  .headline { font-size: 1.125rem; }
+  .tagline { font-size: 1rem; }
+  .summary p { font-size: 1rem; }
+  .contact { gap: 0 20px; }
+  .contact a { min-height: 40px; padding: 8px 0; }
+  .role-head { grid-template-columns: minmax(0, 1fr); }
+  .role-head h3, .role-head .role-meta, .role-head .dates { grid-column: 1; grid-row: auto; }
+  .foot p:last-child { margin-left: 0; }
+  .foot { align-items: baseline; }
+  .foot a { display: inline-block; padding: 4px 0; }
+  .item-head a { padding: 2px 0; }
+}
+
+@page { size: A4; margin: 13mm 14mm; }
+@media print {
+  :root, :root:not([data-theme="light"]), :root[data-theme="dark"], :root[data-theme="light"] {
+    color-scheme: light;
+    --bg: #ffffff;
+    --ink: #111111;
+    --ink-2: #2b2b2b;
+    --muted: #4a4a4a;
+    --accent: #1f3a93;
+    --line: #d4d4d4;
+    --line-strong: #bdbdbd;
+  }
+  html { font-size: 10pt; }
+  body { background: #fff; color: #111; line-height: 1.3; font-family: Helvetica, Arial, sans-serif; font-feature-settings: "kern" 1, "liga" 0; font-variant-ligatures: none; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  * { box-shadow: none !important; text-shadow: none !important; transition: none !important; }
+  .skip, .no-print { display: none !important; }
+  .print-only { display: list-item; }
+  .page { max-width: none; padding: 0; }
+  .masthead { padding-bottom: 6pt; }
+  h1 { font-size: 22pt; }
+  .headline { margin-top: 3pt; font-size: 12pt; }
+  .tagline { margin-top: 2pt; font-size: 10pt; max-width: none; text-wrap: balance; }
+  .loc { margin-top: 4pt; font-size: 9pt; gap: 4pt; }
+  .loc svg { width: 10px; height: 10px; }
+  .contact { margin-top: 3pt; gap: 1pt 14pt; font-size: 9pt; }
+  .contact a { padding: 0; gap: 4pt; color: #111; min-height: 0; }
+  .contact svg { width: 10px; height: 10px; color: #4a4a4a; }
+  .contact .t { display: none; }
+  .contact .print-url { display: inline; }
+  .contact .print-url::after { content: "\00A0"; }
+  a { color: #111; text-decoration: none; }
+  .layout { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 14pt; row-gap: 0; }
+  .layout > section { grid-column: 1 / -1; margin-top: 7pt; }
+  .layout > .pubs, .layout > .certs, .layout > .edu { grid-column: 1 / -1; }
+  .pubs .items p, .certs .items p, .edu .items p { display: inline; }
+  .pubs .item-head::after, .certs .item-head::after, .edu .item-head::after, .edu .item-sub:not(:last-child)::after { content: ","; }
+  .block { padding-top: 3pt; }
+  h2 { margin-bottom: 3pt; font-size: 12pt; break-after: avoid; page-break-after: avoid; }
+  .summary p { font-size: 10pt; line-height: 1.38; max-width: none; }
+  .highlights.block { border-top: 0; padding-top: 0; }
+  .layout > .highlights { margin-top: 4pt; }
+  .hl { display: block; border: 0; font-size: 9pt; line-height: 1.4; }
+  .hl li { display: inline; padding: 0; border: 0; white-space: nowrap; }
+  .hl li + li { border: 0; }
+  .hl li:not(:last-child)::after { content: "\00A0\00B7"; padding: 0 3pt 0 2pt; color: #4a4a4a; }
+  .hl .num { font-size: 10.5pt; }
+  .hl .lbl { font-size: 9pt; }
+  .role { break-inside: avoid; page-break-inside: avoid; }
+  .role-long { break-inside: auto; page-break-inside: auto; }
+  .group { break-inside: avoid; page-break-inside: avoid; }
+  .role-head, .intro { break-after: avoid; page-break-after: avoid; }
+  .role + .role { margin-top: 7pt; padding-top: 0; border-top: 0; }
+  .group { margin-top: 4pt; }
+  .bullets li { break-inside: avoid; page-break-inside: avoid; }
+  h4 { break-after: avoid; page-break-after: avoid; font-size: 10pt; }
+  h4 .period { font-size: 9pt; }
+  h3 { font-size: 11pt; }
+  .role-head { grid-template-columns: auto minmax(0, 1fr) auto; column-gap: 0; }
+  .role-head .role-meta { grid-column: 2; grid-row: 1; }
+  .role-head .role-meta::before { content: "\00A0\00B7\00A0"; color: #4a4a4a; }
+  .role-head .dates { padding-left: 8pt; }
+  .role-head .dates { grid-column: 3; grid-row: 1; }
+  .role-meta { font-size: 10pt; }
+  .dates { font-size: 9.5pt; }
+  .intro { margin-top: 2pt; font-size: 10pt; max-width: none; }
+  .bullets { margin-top: 2pt; padding-left: 12pt; }
+  .role > .bullets { margin-top: 3pt; }
+  .bullets li { max-width: none; padding-left: 0; }
+  .bullets li + li { margin-top: 0.5pt; }
+  .skills .sk { display: grid; grid-template-columns: 12.5em minmax(0, 1fr); column-gap: 8pt; break-inside: avoid; }
+  .skills .sk + .sk { margin-top: 2pt; }
+  .sk h3 { margin: 0; font-size: 8pt; letter-spacing: 0.04em; padding-top: 1.8pt; }
+  .sk h3::after { content: ":"; }
+  .inline { font-size: 9.5pt; line-height: 1.4; }
+  .inline li { white-space: nowrap; }
+  .items > li { break-inside: avoid; }
+  .items > li + li { margin-top: 3pt; }
+  .item-head { font-size: 10pt; }
+  .oss .item-head, .oss .item-sub { display: inline; }
+  .oss .item-head::after { content: ","; }
+  .oss .item-sub::after { content: ":"; }
+  .oss .item-desc { margin-top: 0; display: inline; }
+  .item-head svg { display: none; }
+  .item-sub, .item-desc { font-size: 9.5pt; margin-top: 0; line-height: 1.35; }
+  .foot { margin-top: 7pt; padding-top: 3pt; font-size: 8pt; }
+  .foot p + p { display: none; }
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>SAURABH NIGAM</h1>
-            <div class="subtitle">Engineering Manager | Data Infrastructure &amp; Platform Engineering</div>
-            <div class="contact-info">
-                <span>📍 Bengaluru, India</span>
-                <a href="mailto:saurabhnigam999@gmail.com">📧 Email</a>
-                <a href="tel:+919654309679">📱 +91 9654309679</a>
-                <a href="https://linkedin.com/in/saurabh-nigam-b55a1197" target="_blank">💼 LinkedIn</a>
-                <a href="https://github.com/saurabnigam" target="_blank">💻 GitHub</a>
-                <a href="/showcase/">🗂️ Showcase</a>
-                <a href="https://stackoverflow.com/users/14176456/saurabh-nigam" target="_blank">🔗 Stack Overflow</a>
-            </div>
-        </div>
+<!-- Icons: Simple Icons (CC0 1.0) and Feather (MIT) -->
+<a class="skip" href="#main">Skip to content</a>
+<div class="page">
+<header class="masthead">
+  <h1>Saurabh Nigam</h1>
+  <p class="headline">Engineering Manager, Data &amp; ML Platforms</p>
+  <p class="tagline">Leads the platform teams behind Zeta&rsquo;s CDC replication and ML infrastructure, and the architecture of its lakehouse.</p>
+  <p class="loc"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Bengaluru, India</p>
+  <ul class="contact" aria-label="Contact and links">
+    <li><a href="mailto:saurabhnigam999@gmail.com"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span class="t">Email</span><span class="print-url"> saurabhnigam999@gmail.com</span></a></li>
+    <li><a href="https://www.linkedin.com/in/saurabh-nigam-b55a1197" rel="me noopener" target="_blank" aria-description="Opens in a new tab"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg><span class="t">LinkedIn</span><span class="print-url"> linkedin.com/in/saurabh-nigam-b55a1197</span></a></li>
+    <li><a href="https://github.com/saurabnigam" rel="me noopener" target="_blank" aria-description="Opens in a new tab"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg><span class="t">GitHub</span><span class="print-url"> github.com/saurabnigam</span></a></li>
+    <li><a href="https://stackoverflow.com/users/14176456/saurabh-nigam" rel="me noopener" target="_blank" aria-description="Opens in a new tab"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M15.725 0l-1.72 1.277 6.39 8.588 1.716-1.277L15.725 0zm-3.94 3.418l-1.369 1.644 8.225 6.85 1.369-1.644-8.225-6.85zm-3.15 4.465l-.905 1.94 9.702 4.517.904-1.94-9.701-4.517zm-1.85 4.86l-.44 2.093 10.473 2.201.44-2.092-10.473-2.203zM1.89 15.47V24h19.19v-8.53h-2.133v6.397H4.021v-6.396H1.89zm4.265 2.133v2.13h10.66v-2.13H6.154Z"/></svg><span class="t">Stack Overflow</span><span class="print-url"> stackoverflow.com/users/14176456/saurabh-nigam</span></a></li>
+    <li class="print-only"><a href="https://saurabnigam.github.io/"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg><span class="t">Web</span><span class="print-url"> saurabnigam.github.io</span></a></li>
+    <li class="no-print"><a href="/showcase/"><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg><span class="t">Showcase</span></a></li>
+    <li class="no-print"><a href="/Saurabh-Nigam-Resume.pdf" download><svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span class="t">Download PDF</span></a></li>
+  </ul>
+</header>
 
-        <div class="content">
-            <div class="section">
-                <h2>Summary</h2>
-                <p class="summary">
-                    Engineering Manager with <strong>10 years</strong> of experience designing, building, and leading teams for large-scale distributed systems, cloud-native infrastructure, and high-performance data platforms. Lead an 18-person backend, platform, and BI engineering org at Zeta through 2 team leads, owning the architecture, delivery, and people strategy behind mission-critical, bank-grade financial data infrastructure. Earned Zeta's <strong>Outstanding rating (2024-2025)</strong> as an EM for organisational impact and delivery of roughly 1.5× expected output. Deep expertise in microservices, event-driven architecture, Kubernetes, and distributed data processing (Kafka, Spark), paired with early, hands-on adoption of AI-assisted and eval-driven engineering workflows.
-                </p>
-            </div>
+<main id="main" class="layout">
+  <section class="summary block" aria-labelledby="h-summary">
+    <h2 id="h-summary">Summary</h2>
+    <p>Engineering Manager since 2024, with 10+ years in engineering across distributed systems and data platforms, 5 of them in technical leadership. Led Team Pontus, an 18-person organisation run through 2 team leads, setting its engineering process and owning architecture for bank-grade data platforms serving 5 to 6 enterprise banking customers. Rated Outstanding in two consecutive cycles (2024-25 and 2025-26). Now leads Zeta&rsquo;s Metis change data capture (CDC) replication and Elara ML infrastructure teams, drives architecture for an in-house lakehouse and builds AI agents and agent harnesses hands-on.</p>
+  </section>
 
-            <div class="section">
-                <h2>Core Leadership &amp; Technical Competencies</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <strong>People Leadership</strong>
-                        <span class="badge">Manager of Managers</span>
-                        <span class="badge">Hiring &amp; Mentoring</span>
-                        <span class="badge">Performance Management</span>
-                        <span class="badge">Org Design</span>
-                        <span class="badge">Agile</span>
-                    </div>
-                    <div class="skill-category">
-                        <strong>System Architecture</strong>
-                        <span class="badge">Distributed Systems</span>
-                        <span class="badge">Microservices</span>
-                        <span class="badge">Event-Driven</span>
-                        <span class="badge">Data Mesh</span>
-                        <span class="badge">BIAN</span>
-                    </div>
-                    <div class="skill-category">
-                        <strong>Backend &amp; Data</strong>
-                        <span class="badge">Java</span>
-                        <span class="badge">Spring Boot</span>
-                        <span class="badge">PostgreSQL</span>
-                        <span class="badge">Redis</span>
-                        <span class="badge">REST APIs</span>
-                    </div>
-                    <div class="skill-category">
-                        <strong>Data &amp; Cloud</strong>
-                        <span class="badge">dbt</span>
-                        <span class="badge">Redshift</span>
-                        <span class="badge">Kafka</span>
-                        <span class="badge">Spark</span>
-                        <span class="badge">Trino</span>
-                        <span class="badge">Airflow</span>
-                        <span class="badge">AWS</span>
-                        <span class="badge">Kubernetes</span>
-                        <span class="badge">Docker</span>
-                    </div>
-                    <div class="skill-category">
-                        <strong>AI Engineering</strong>
-                        <span class="badge">Agent Harness</span>
-                        <span class="badge">LangChain</span>
-                        <span class="badge">Claude</span>
-                        <span class="badge">Eval-Driven Engineering</span>
-                    </div>
-                </div>
-            </div>
+  <section class="highlights rail block" aria-labelledby="h-highlights">
+    <p class="vh" id="h-highlights">Highlights</p>
+    <ul class="hl">
+      <li><span class="num">18</span> <span class="lbl">person org, led through 2 team leads</span></li>
+      <li><span class="num">2</span> <span class="lbl">consecutive Outstanding ratings, 2024-25 and 2025-26</span></li>
+      <li><span class="num">6</span> <span class="lbl">internal product lines on one Kubernetes operator</span></li>
+      <li><span class="num">~80%</span> <span class="lbl">root-cause accuracy on evals, AI&nbsp;lineage agent</span></li>
+    </ul>
+  </section>
 
-            <div class="section">
-                <h2>Professional Experience</h2>
-                
-                <div class="job">
-                    <div class="job-header">
-                        <div class="job-title">Engineering Manager, Data Infrastructure (Team Pontus)</div>
-                        <div><span class="company">Zeta</span> <span class="date">• Jan 2024 – Present • Bengaluru, India</span></div>
-                    </div>
-                    <ul class="achievements">
-                        <li>Lead an <strong>18-person backend, platform, and BI engineering</strong> organisation through 2 direct-report team leads — owning org-wide technical strategy, hiring, mentoring pathways, and performance management</li>
-                        <li>Earned Zeta's <strong>Outstanding rating (2024-2025)</strong> as an Engineering Manager — recognised for organisational impact, platform modernisation, and delivery of <strong>~1.5× expected output</strong></li>
-                        <li>Own architecture and roadmap for mission-critical, bank-grade financial data platforms (credit & loans) serving <strong>5-6 enterprise banking customers</strong>, enabling faster analytics and operational reporting</li>
-                        <li>Drove a <strong>DBT + Redshift performance initiative</strong> that cut a critical analytics workload's runtime from 2 hours to under 30 minutes (<strong>70% reduction</strong>), improving reporting SLAs and service reliability</li>
-                        <li>Led org-wide adoption of <strong>Data Mesh</strong> and enforced <strong>data contracts</strong> — decentralising ownership and reducing schema breaks across hundreds of downstream services</li>
-                        <li>Built an <strong>AI lineage and incident-triage agent</strong> (LangChain + Claude) parsing dbt manifests to isolate root causes (<strong>80% accuracy, eval-measured</strong>), and established eval-driven engineering with business unit test coverage across pipeline and agent code</li>
-                    </ul>
-                </div>
+  <section class="experience block" aria-labelledby="h-experience">
+    <h2 id="h-experience">Experience</h2>
 
-                <div class="job">
-                    <div class="job-header">
-                        <div class="job-title">Lead Software Developer</div>
-                        <div><span class="company">Zeta</span> <span class="date">• 2021 – Dec 2023</span></div>
-                    </div>
-                    <ul class="achievements">
-                        <li>Led a <strong>5-engineer team</strong> delivering a mission-critical, fault-tolerant loan servicing platform for <strong>HDFC Bank</strong>, one of India's largest private banks</li>
-                        <li>Architected a high-throughput, event-driven system (Kafka, Spring Boot, PostgreSQL, Redis) handling large-scale financial transactions</li>
-                        <li>Improved <strong>SQL performance by 50%</strong> through indexing, query refactoring, and data modelling</li>
-                        <li>Partnered with Product, SRE, and Release Engineering to deliver robust, regulated financial systems</li>
-                    </ul>
-                </div>
+    <article class="role role-long">
+      <div class="role-head">
+        <h3>Engineering Manager, Data &amp; ML Platforms</h3>
+        <p class="role-meta"><span class="org">Zeta</span>, Bengaluru, India</p>
+        <p class="dates"><time datetime="2024-01">Jan 2024</time> to Present</p>
+      </div>
+      <p class="intro">Scope moved in 2026 from credit and loans data platforms (Team Pontus) to data replication and ML infrastructure platforms (Metis, Elara). Hands-on in design, architecture and code review (Java, Python).</p>
 
-                <div class="job">
-                    <div class="job-header">
-                        <div class="job-title">Senior Software Engineer</div>
-                        <div><span class="company">FarEye</span> <span class="date">• 2016 – 2021</span></div>
-                    </div>
-                    <ul class="achievements">
-                        <li>Designed and built core Java microservices for real-time, global-scale logistics and delivery operations</li>
-                        <li>Led the migration to <strong>Kubernetes</strong> — enabling scalable, containerised deployments and faster release velocity</li>
-                        <li>Built a real-time data pipeline (Spark + Kafka) that improved <strong>system throughput by 60%</strong> + added a platform-wide alerting and notification system that improved observability and incident response</li>
-                    </ul>
-                </div>
-            </div>
+      <div class="group">
+        <h4>Metis and Elara platforms <span class="period"><time datetime="2026">2026</time> to Present</span></h4>
+        <ul class="bullets">
+          <li>Leads two infrastructure platform teams: Metis for streaming change data capture (CDC) replication on Debezium, Kafka and Kubernetes operators; Elara for a Jupyter notebook platform and full-stack ML inference apps.</li>
+          <li>Drives the architecture for an in-house lakehouse and transformation platform, with Spark and Redshift as interchangeable execution engines behind one interface.</li>
+          <li>Defines CI/CD as a first-class product for internal teams, kept deliberately separate from application CI/CD.</li>
+          <li>Owns roadmaps, SLAs and 24x7 reliability for both platforms with Product, SRE and Release Engineering.</li>
+          <li>Heads end-to-end far-site disaster recovery for the Metis replication platform, which feeds downstream data and ML systems.</li>
+        </ul>
+      </div>
 
-            <div class="section">
-                <h2>Open Source &amp; Publications</h2>
-                <div class="opensource-item">
-                    <h4>dbt-coverage</h4>
-                    <a href="https://github.com/saurabnigam/dbt-coverage" target="_blank">github.com/saurabnigam/dbt-coverage</a>
-                    <p>Built and open-sourced a dbt test coverage framework, adopted at Zeta to improve data quality visibility and enforce CI/CD quality gates.</p>
-                </div>
-                <div class="opensource-item">
-                    <h4>Keploy Java SDK (Initial Developer Contributor)</h4>
-                    <a href="https://github.com/keploy/java-sdk" target="_blank">github.com/keploy/java-sdk</a>
-                    <p>Initial developer contributor to the Keploy Java SDK for API testing and mocking.</p>
-                </div>
-                <div style="margin-top: 20px;">
-                    <strong>Paper:</strong> "Survey and Evaluation of Food Recommendation" — IEEE INDIACom-2016 (ISSN: 0973-7529)
-                </div>
-            </div>
+      <div class="group">
+        <h4>Team Pontus <span class="period"><time datetime="2024-01">Jan 2024</time> to <time datetime="2026">2026</time></span></h4>
+        <ul class="bullets">
+          <li>Led an 18-person backend, platform and BI engineering org through 2 team leads, owning hiring, calibration and performance management, with 0% attrition and zero major production incidents in H1 2026.</li>
+          <li>Set the engineering process across teams, from quarterly capacity planning and CI coverage gates to enforced data contracts that reduced schema breaks across hundreds of downstream services.</li>
+          <li>Conceived and architected a declarative Kubernetes operator, built by the team, that replaced per-team operators, cut tenant onboarding from weeks to minutes and was adopted by 6 internal product lines.</li>
+          <li>Directed the team that cut the largest aggregate models from 15+ to under 2 minutes and a large private bank&rsquo;s end-of-day batch from ~1.5 hours to ~35 minutes.</li>
+          <li>Wrote the Redshift Serverless risk analysis that paused a premature migration, then guided a tenant-isolated rollout; the team halved base capacity from 128 to 64 RPUs, cutting infrastructure cost.</li>
+        </ul>
+      </div>
 
-            <div class="section">
-                <h2>Certifications</h2>
-                <div class="cert-badge">
-                    <strong>🏆 BIAN Banking Architecture Foundation</strong> — BIAN Services GmbH (July 2025)
-                </div>
-            </div>
+      <div class="group">
+        <h4>AI-native engineering <span class="period"><time datetime="2024">2024</time> to Present</span></h4>
+        <ul class="bullets">
+          <li>Built and open-sourced dbt-coverage with AI coding: a dbt and SQL test-coverage tool adopted at Zeta as a CI/CD quality gate.</li>
+          <li>Launched a prompt-to-PR dbt harness for analytics engineers that turns a requirement into a tested, documented, quality-gated pull request, with an eval loop scoring agent skills against task suites.</li>
+          <li>Built an AI lineage and incident-triage agent (LangChain, Claude) that uses dbt manifests to isolate root causes of pipeline failures, with ~80% accuracy on evals.</li>
+          <li>Created a demand-deposit datamart for a new strategic client in one week with <span class="nw">AI-assisted</span> development, then anchored it technically until the client&rsquo;s dedicated team was hired.</li>
+        </ul>
+      </div>
+    </article>
 
-            <div class="section">
-                <h2>Education</h2>
-                <div class="job">
-                    <div class="job-header">
-                        <div class="job-title">B.Tech, Computer Science Engineering</div>
-                        <div>Maharaja Agrasen Institute of Technology, New Delhi <span class="date">• 2012 – 2016 • 80.35%</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <article class="role">
+      <div class="role-head">
+        <h3>Lead Software Developer</h3>
+        <p class="role-meta"><span class="org">Zeta</span></p>
+        <p class="dates"><time datetime="2021">2021</time> to <time datetime="2023-12">Dec 2023</time></p>
+      </div>
+      <ul class="bullets">
+        <li>Led and mentored a 5-engineer team that delivered a fault-tolerant loan servicing platform for HDFC Bank, one of India&rsquo;s largest private banks.</li>
+        <li>Architected a high-throughput, event-driven financial transaction system on Kafka, Spring Boot, PostgreSQL and Redis.</li>
+        <li>Improved SQL performance by ~50% through indexing, query refactoring and data modelling.</li>
+        <li>Partnered with Product, SRE and Release Engineering on testing, monitoring and release processes for regulated banking systems.</li>
+      </ul>
+    </article>
+
+    <article class="role">
+      <div class="role-head">
+        <h3>Senior Software Engineer</h3>
+        <p class="role-meta"><span class="org">FarEye</span></p>
+        <p class="dates"><time datetime="2016">2016</time> to <time datetime="2021">2021</time></p>
+      </div>
+      <ul class="bullets">
+        <li>Designed and built core Java microservices for real-time, global-scale logistics and delivery operations.</li>
+        <li>Led the migration to Kubernetes, enabling containerised deployments and faster release velocity.</li>
+        <li>Built a real-time Spark and Kafka data pipeline that improved system throughput by ~60%.</li>
+        <li>Introduced a platform-wide alerting and notification system that improved observability and incident response.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="skills rail block" aria-labelledby="h-skills">
+    <h2 id="h-skills">Skills</h2>
+    <div class="sk">
+      <h3>Engineering Leadership</h3>
+      <ul class="inline">
+        <li>Manager of managers</li>
+        <li>Hiring and team building</li>
+        <li>Developing team leads</li>
+        <li>Org design</li>
+        <li>Performance management and <span class="nw">rubric-driven</span> calibration</li>
+        <li>Roadmap and capacity planning</li>
+        <li>Engineering process and SDLC</li>
+        <li>Architecture review</li>
+        <li>Stakeholder and executive communication</li>
+        <li>Cross-functional delivery</li>
+      </ul>
     </div>
+    <div class="sk">
+      <h3>Data Platform</h3>
+      <ul class="inline">
+        <li>dbt</li>
+        <li>Amazon Redshift (provisioned and Serverless)</li>
+        <li>Apache Spark</li>
+        <li>Trino (Presto)</li>
+        <li>Apache Airflow</li>
+        <li>Apache Iceberg</li>
+        <li>Delta Lake</li>
+        <li>AWS Glue and Amazon Athena</li>
+        <li>Lakehouse architecture</li>
+        <li>Data mesh and data contracts</li>
+      </ul>
+    </div>
+    <div class="sk">
+      <h3>Platform Engineering and Distributed Systems</h3>
+      <ul class="inline">
+        <li>Apache Kafka</li>
+        <li>Debezium</li>
+        <li>Change data capture (CDC)</li>
+        <li>Kubernetes and Kubernetes operators</li>
+        <li>AWS</li>
+        <li>Infrastructure as code</li>
+        <li>CI/CD as a product (Jenkins, GitHub Actions)</li>
+        <li>Canary rollouts and quality gates</li>
+        <li>Disaster recovery</li>
+        <li>Observability, monitoring and SLAs</li>
+      </ul>
+    </div>
+    <div class="sk">
+      <h3>AI and ML Engineering</h3>
+      <ul class="inline">
+        <li>Claude Code</li>
+        <li>MCP (Model Context Protocol)</li>
+        <li>Pydantic AI</li>
+        <li>LangChain</li>
+        <li>AI agents</li>
+        <li>Agent harness design</li>
+        <li>LLM evals and eval harnesses</li>
+        <li><span class="nw">Eval-driven</span> engineering</li>
+        <li>Jupyter</li>
+        <li>ML inference apps</li>
+      </ul>
+    </div>
+    <div class="sk">
+      <h3>Languages and Backend</h3>
+      <ul class="inline">
+        <li>Java</li>
+        <li>Python</li>
+        <li>SQL</li>
+        <li>Spring Boot</li>
+        <li>REST APIs</li>
+        <li>PostgreSQL</li>
+        <li>Redis</li>
+        <li><span class="nw">Event-driven</span> microservices</li>
+        <li>Docker</li>
+      </ul>
+    </div>
+    <div class="sk">
+      <h3>Domain</h3>
+      <ul class="inline">
+        <li>Regulated banking</li>
+        <li>Credit and loans</li>
+        <li>Payments</li>
+        <li>BIAN banking architecture</li>
+        <li><span class="nw">Multi-tenant</span> fintech SaaS</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="oss rail block" aria-labelledby="h-oss">
+    <h2 id="h-oss">Open Source</h2>
+    <ul class="items">
+      <li>
+        <p class="item-head"><a href="https://github.com/saurabnigam/dbt-coverage" rel="noopener" target="_blank" aria-description="Opens in a new tab">dbt-coverage<svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></p>
+        <p class="item-sub">Author</p>
+        <p class="item-desc">Test-coverage and quality-gate tool for dbt and SQL projects, built end to end with AI coding and adopted at Zeta as a CI/CD gate.</p>
+      </li>
+      <li>
+        <p class="item-head"><a href="https://github.com/saurabnigam/llm-evals-engineering-course" rel="noopener" target="_blank" aria-description="Opens in a new tab">llm-evals-engineering-course<svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></p>
+        <p class="item-sub">Author</p>
+        <p class="item-desc">A 17-module, ~48-hour course on building LLM evaluation systems: <span class="nw">LLM-as-judge</span> design, agent and trajectory evals, CI/CD eval gates and benchmark contamination. Every claim is&nbsp;source-linked.</p>
+      </li>
+      <li>
+        <p class="item-head"><a href="https://github.com/keploy/java-sdk" rel="noopener" target="_blank" aria-description="Opens in a new tab">Keploy Java SDK<svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></p>
+        <p class="item-sub">Initial developer and contributor</p>
+        <p class="item-desc">Open-source Java SDK for Keploy, an API testing and mocking tool.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="pubs rail block" aria-labelledby="h-pubs">
+    <h2 id="h-pubs">Publications</h2>
+    <ul class="items">
+      <li>
+        <p class="item-head"><cite>Survey and Evaluation of Food Recommendation</cite></p>
+        <p class="item-sub">IEEE INDIACom-2016, <time datetime="2016">2016</time>. ISSN&nbsp;0973-7529</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="certs rail block" aria-labelledby="h-certs">
+    <h2 id="h-certs">Certifications</h2>
+    <ul class="items">
+      <li>
+        <p class="item-head">BIAN Banking Architecture Foundation</p>
+        <p class="item-sub">BIAN Services GmbH, <time datetime="2025-07">Jul 2025</time></p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="edu rail block" aria-labelledby="h-edu">
+    <h2 id="h-edu">Education</h2>
+    <ul class="items">
+      <li>
+        <p class="item-head">B.Tech, Computer Science Engineering</p>
+        <p class="item-sub">Maharaja Agrasen Institute of Technology, New Delhi</p>
+        <p class="item-sub"><span class="nw"><time datetime="2012">2012</time> to <time datetime="2016">2016</time>. Score 80.35%</span></p>
+      </li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Updated <time datetime="2026-10">October 2026</time></p>
+  <p>No cookies, no analytics</p>
+  <p><a href="/resume.json">JSON</a> <span class="sep" aria-hidden="true">&middot;</span> <a href="/Saurabh-Nigam-Resume.pdf" download>PDF</a></p>
+</footer>
+</div>
 </body>
 </html>
